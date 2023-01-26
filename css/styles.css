@@ -37,13 +37,23 @@ img {
 
 .link {text-decoration: none; } /* Убираем подчёркивание */
 
-/* =============COMPOMENTS============*/
- 
 body {
   background-color: var(--primery-background-color);
   color: var(--primery-text-color);
   font-family: Roboto, sans-serif;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* =============COMPOMENTS============*/
 
 .visually-hidden {
   position: absolute;
@@ -70,7 +80,11 @@ letter-spacing: 0.02em;
 
 /* LOGO */
 
-.logo {color: #4D5AE5;
+.logo {
+  display: flex;
+  align-items: center;
+  
+  color: #4D5AE5;
   font-family: Raleway, sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -87,7 +101,21 @@ letter-spacing: 0.02em;
 
 /* ===============HEADER============== */
 
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
 .logo-header {
+  display: flex;
+  align-items: center;
+
+  margin-right: 76px;
   color: #2E2F42;
   font-family: Raleway, sans-serif;
   font-weight: 800;
@@ -98,6 +126,16 @@ letter-spacing: 0.02em;
   align-items: center;
   text-transform: uppercase;
 }
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
 
 .site-nav .link {
   color: var(--title-text-color);
@@ -113,10 +151,25 @@ letter-spacing: 0.02em;
   }
 
 .site-nav .link.current {
-  color: var(--accent-color) ;
+  color: var(--accent-color);
 }
 
-.contacts .info {
+.address-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.tel-mail {
+  display: flex;
+  align-items: center; 
+}
+
+.info-tel {
+  margin-left: 40px;
+}
+
+.tel-mail .info {
   font-family: 'Roboto',sans-serif;
   color: var(--primery-text-color);
   font-style: normal;
@@ -125,37 +178,45 @@ letter-spacing: 0.02em;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-.contacts .info:hover,
-.contacts .info:focus {
+.tel-mail .info:hover,
+.tel-mail .info:focus {
   color: var(--accent-color);
 }
 
+
 /* ==============HERO============= */
+
 .hero {
-  background-color: var(--secondary-background-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #2E2F42;
+
+
+
 }
 .hero-title {
+  display: flex;
+  align-items: center;
   color: #ffffff;
-  font-family: 'Roboto',sans-serif;
-  font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
+  background-color: #2E2F42;
 }
 
 .hero-button {
+  display: flex;
+  align-items: center;
   font-family: 'Roboto',sans-serif;
   color: #4D5AE5;
   background-color: var(--primery-background-color);
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.04em;
+  text-align: center;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -164,10 +225,12 @@ letter-spacing: 0.02em;
 }
 .hero-button { cursor: pointer;}
 
+/* ===============STRATEGY-SECTION============= */
+
+/* ===============SAMPLES-SECTION============= */
+
 .page-title {
-  font-family: 'Roboto',sans-serif;
   color: var(--title-text-color);
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.1;
   text-align: center;
@@ -175,9 +238,18 @@ letter-spacing: 0.02em;
   text-transform: capitalize;   
 }
 
-/* ===============STRATEGY-SECTION============= */
+.strategy-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 120px;
+}
 
-/* ===============SAMPLES-SECTION============= */
+.strategy-item {
+  width: 264px; 
+}
+.strategy-item:not(:last-child) 
+ { margin-right: 24px;
+}
 
 /* ===============TEAM-SECTION============= */
 
@@ -220,7 +292,7 @@ letter-spacing: 0.02em;
 .button {
   font-family: 'Roboto',sans-serif;
   color: #4D5AE5;
-  background-color: var(--primery-background-color);
+  background-color: #F4F4FD;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
