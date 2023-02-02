@@ -30,6 +30,7 @@ ol {
 }
 
 img {
+  height: auto;
   display: block;
 }
 
@@ -152,6 +153,8 @@ body {
 
 
 .site-nav .link {
+  padding-top: 24px;
+  padding-bottom: 24px;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -170,7 +173,8 @@ body {
 
 
 .tel-mail .info {
-  font-family: 'Roboto',sans-serif;
+  padding-top: 24px;
+  padding-bottom: 24px;
   color: var(--primery-text-color);
   font-style: normal;
   font-weight: 400;
@@ -201,7 +205,6 @@ body {
 
 
   color: #ffffff;
-  font-family: 'Roboto',sans-serif;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -216,12 +219,8 @@ body {
   border-radius: 4px;
   border: none;
   
-  font-family: 'Roboto',sans-serif;
   color: #ffffff;
-  ;
   background-color: #4D5AE5;
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -404,8 +403,6 @@ flex-grow: 0;
   border: 1px solid #E7E9FC;
   border-radius: 4px;
   
-
-  font-family: 'Roboto',sans-serif;
   color: #4D5AE5;
   background-color: #F4F4FD;
   font-weight: 500;
@@ -431,13 +428,18 @@ flex-grow: 0;
   flex-wrap: wrap;
   display: flex;
   align-items: center;
-  gap: 24px; 
+   
 }
 
 .portfolio-item {
+  margin-right: 24px;
   margin-bottom: 48px;
   flex-basis: calc((100% - 144px) / 9);
   background-color: var(--primery-background-color);
+}
+
+.portfolio-item:nth-child(3n + 3) {
+  margin-right: 0px;
 }
 
 .portfolio-item:nth-last-child(-n + 3) {
@@ -454,7 +456,6 @@ flex-grow: 0;
 }
 
 .section-title {
-  font-family: 'Roboto',sans-serif;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 20px;
